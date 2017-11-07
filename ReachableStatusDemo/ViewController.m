@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "NetworkStatusManager.h"
 
 @interface ViewController ()
-
+@property(nonatomic, strong)NetworkStatusManager *netManager;
 @end
 
 @implementation ViewController
@@ -17,8 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.netManager = [NetworkStatusManager shareInstance];
 }
 
+- (IBAction)handleStart:(UIButton *)sender {
+    [_netManager startObserveNetworkStatus];
+}
+
+- (IBAction)handleStop:(UIButton *)sender {
+    [_netManager stopObserveNetworkiStatus];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

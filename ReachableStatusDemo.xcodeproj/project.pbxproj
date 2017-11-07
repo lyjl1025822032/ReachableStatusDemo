@@ -15,6 +15,9 @@
 		202827E11FAC021A00E5BBAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 202827E01FAC021A00E5BBAF /* main.m */; };
 		202827EB1FAC021A00E5BBAF /* ReachableStatusDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 202827EA1FAC021A00E5BBAF /* ReachableStatusDemoTests.m */; };
 		202827F61FAC021A00E5BBAF /* ReachableStatusDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 202827F51FAC021A00E5BBAF /* ReachableStatusDemoUITests.m */; };
+		202828051FAC023B00E5BBAF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202828041FAC023B00E5BBAF /* SystemConfiguration.framework */; };
+		202828081FAC025600E5BBAF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 202828071FAC025600E5BBAF /* Reachability.m */; };
+		2028280B1FAC027D00E5BBAF /* NetworkStatusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2028280A1FAC027D00E5BBAF /* NetworkStatusManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		202827F11FAC021A00E5BBAF /* ReachableStatusDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReachableStatusDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		202827F51FAC021A00E5BBAF /* ReachableStatusDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReachableStatusDemoUITests.m; sourceTree = "<group>"; };
 		202827F71FAC021A00E5BBAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		202828041FAC023B00E5BBAF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		202828061FAC025600E5BBAF /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		202828071FAC025600E5BBAF /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		202828091FAC027D00E5BBAF /* NetworkStatusManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkStatusManager.h; sourceTree = "<group>"; };
+		2028280A1FAC027D00E5BBAF /* NetworkStatusManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkStatusManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202828051FAC023B00E5BBAF /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +94,7 @@
 				202827E91FAC021A00E5BBAF /* ReachableStatusDemoTests */,
 				202827F41FAC021A00E5BBAF /* ReachableStatusDemoUITests */,
 				202827CF1FAC021A00E5BBAF /* Products */,
+				202828031FAC023B00E5BBAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,8 +111,12 @@
 		202827D01FAC021A00E5BBAF /* ReachableStatusDemo */ = {
 			isa = PBXGroup;
 			children = (
+				202828061FAC025600E5BBAF /* Reachability.h */,
+				202828071FAC025600E5BBAF /* Reachability.m */,
 				202827D11FAC021A00E5BBAF /* AppDelegate.h */,
 				202827D21FAC021A00E5BBAF /* AppDelegate.m */,
+				202828091FAC027D00E5BBAF /* NetworkStatusManager.h */,
+				2028280A1FAC027D00E5BBAF /* NetworkStatusManager.m */,
 				202827D41FAC021A00E5BBAF /* ViewController.h */,
 				202827D51FAC021A00E5BBAF /* ViewController.m */,
 				202827D71FAC021A00E5BBAF /* Main.storyboard */,
@@ -130,6 +144,14 @@
 				202827F71FAC021A00E5BBAF /* Info.plist */,
 			);
 			path = ReachableStatusDemoUITests;
+			sourceTree = "<group>";
+		};
+		202828031FAC023B00E5BBAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				202828041FAC023B00E5BBAF /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +289,8 @@
 			files = (
 				202827D61FAC021A00E5BBAF /* ViewController.m in Sources */,
 				202827E11FAC021A00E5BBAF /* main.m in Sources */,
+				202828081FAC025600E5BBAF /* Reachability.m in Sources */,
+				2028280B1FAC027D00E5BBAF /* NetworkStatusManager.m in Sources */,
 				202827D31FAC021A00E5BBAF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,8 +455,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M4C7ZCQAKU;
+				DEVELOPMENT_TEAM = U746D2ER88;
 				INFOPLIST_FILE = ReachableStatusDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ReachableStatusDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,8 +470,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M4C7ZCQAKU;
+				DEVELOPMENT_TEAM = U746D2ER88;
 				INFOPLIST_FILE = ReachableStatusDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ReachableStatusDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
